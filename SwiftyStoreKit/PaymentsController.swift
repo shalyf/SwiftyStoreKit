@@ -27,6 +27,7 @@ import StoreKit
 
 struct Payment: Hashable {
     let product: SKProduct
+    let paymentDiscount: PaymentDiscount?
     let quantity: Int
     let atomically: Bool
     let applicationUsername: String

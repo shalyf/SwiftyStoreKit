@@ -238,3 +238,20 @@ public enum ReceiptInfoField: String {
         case notValid = 173
     }
 #endif
+
+// Payment Discount
+public struct PaymentDiscount {
+    public let identifier: String
+    public let keyIdentifier: String
+    public let nonce: UUID
+    public let signature: String
+    public let timestamp: NSNumber
+    
+    public init(identifier: String, keyIdentifier: String, nonce: UUID, signature: String, timestamp: NSNumber) {
+        self.identifier = identifier
+        self.keyIdentifier = keyIdentifier
+        self.nonce = nonce
+        self.signature = signature
+        self.timestamp = timestamp
+    }
+}
